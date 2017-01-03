@@ -1,0 +1,21 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    font: 100% $font-stack;
+    color: $primary-color;
+}
+
+html, body {
+    background: #dfdfdf;
+}
+
+h1 {
+    color: #666;
+}
