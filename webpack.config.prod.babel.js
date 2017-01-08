@@ -2,10 +2,8 @@ import path from 'path';
 import webpack from 'webpack';
 import cssnext from 'postcss-cssnext';
 
-import AddAssetHtmlPlugin from 'add-asset-html-webpack-plugin';
 import BundleTracker from 'webpack-bundle-tracker';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
 import WebpackMd5Hash from 'webpack-md5-hash';
 
 import * as ReactManifest from './frontend/dist/dll/react_manifest.json';
@@ -15,7 +13,9 @@ export default {
     context: path.resolve(__dirname),
 
     entry: {
-        app: './frontend/src/js/index',
+        app: [
+            './frontend/src/js/index',
+        ],
     },
 
     output: {
@@ -31,10 +31,6 @@ export default {
                 use: [
                     {
                         loader: 'babel-loader',
-                        options: {
-                            cacheDirectory: true,
-                            plugins: ['transform-runtime'],
-                        },
                     },
                 ],
             },
@@ -81,7 +77,6 @@ export default {
             sourceMap: true,
         }),
         new webpack.NoErrorsPlugin(),
-        // new webpack.HotModuleReplacementPlugin(),
         new webpack.LoaderOptionsPlugin({
             test: /\.scss$/,
             options: {
@@ -99,17 +94,8 @@ export default {
             manifest: ReactManifest,
             context: __dirname,
         }),
-        new AddAssetHtmlPlugin([
-            { filepath: 'frontend/dist/dll/react_dll.js', includeSourcemap: false },
-        ]),
         new BundleTracker({ filename: './webpack-stats.prod.json' }),
         new ExtractTextPlugin('[name]-[contenthash:10].css'),
-        new HtmlWebpackPlugin({
-            title: 'My Blog',
-            filename: 'index.html',
-            inject: false,
-            template: path.resolve(__dirname, 'frontend/template/index.ejs'),
-        }),
         new WebpackMd5Hash(),
     ],
 

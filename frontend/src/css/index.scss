@@ -7,15 +7,11 @@ $primary-color: #333;
     justify-content: center;
 }
 
-body {
-    font: 100% $font-stack;
-    color: $primary-color;
-}
-
 html, body {
+    font: 100% $font-stack;
     background: #dfdfdf;
 }
 
 h1 {
-    color: #666;
+    color: $primary-color;
 }

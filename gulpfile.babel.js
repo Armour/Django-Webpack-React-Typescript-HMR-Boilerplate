@@ -1,6 +1,6 @@
 import gulp from 'gulp';
-import yargs from 'yargs';
 import command from 'gulp-run';
+import yargs from 'yargs';
 import del from 'del';
 
 

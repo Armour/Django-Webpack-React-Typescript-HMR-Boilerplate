@@ -2,10 +2,9 @@
 node_modules/
 pyenv/
 frontend/dist/
-static/
+backend/static/
 .python-version
 npm-debug.log
-package.json
 webpack-stats.*.json
 *.pyc
 *.swp

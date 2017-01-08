@@ -25,7 +25,7 @@ SECRET_KEY = 'byd3@!)i)0j*qnn36+nlzbm%fatts!7!rryz3vf+jl92@_!8!j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0']
 
 
 # Application definition
@@ -137,14 +137,16 @@ WEBPACK_LOADER = {
         'BUNDLE_DIR_NAME': 'dll/',
         'STATS_FILE': os.path.join(BASE_DIR, '../webpack-stats.dll.json'),
     },
-    'DEVELOPMENT': {
-        'CACHE': not DEBUG,
+    'DEFAULT': {
+        'CACHE': False,
         'BUNDLE_DIR_NAME': 'dev/',
         'STATS_FILE': os.path.join(BASE_DIR, '../webpack-stats.dev.json'),
     },
-    'PRODUCTION': {
-        'CACHE': not DEBUG,
+}
+
+if not DEBUG:
+    WEBPACK_LOADER['DEFAULT'].update({
+        'CACHE': True,
         'BUNDLE_DIR_NAME': 'prod/',
         'STATS_FILE': os.path.join(BASE_DIR, '../webpack-stats.prod.json'),
-    },
-}
+    })

@@ -1,8 +1,19 @@
 {
-  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    "airbnb",
+    "plugin:jsx-a11y/recommended"
+  ],
   "parser": "babel-eslint",
+  "plugins": [
+    "jsx-a11y"
+  ],
   "rules": {
-    "indent": [1, 4]
+    "indent": [2, 4]
   },
   "settings": {
     "import/resolver": {
@@ -10,9 +21,5 @@
         "config": "webpack.config.prod.babel.js"
       }
     }
-  },
-  "env": {
-    "browser": true,
-    "node": true
   }
 }
