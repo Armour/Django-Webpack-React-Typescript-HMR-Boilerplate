@@ -1,17 +1,16 @@
 $font-stack: Helvetica, sans-serif;
 $primary-color: #333;
 
-.centered {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-html, body {
-    font: 100% $font-stack;
-    background: #dfdfdf;
+html,
+body {
+  font: 100% $font-stack;
+  background: #dfdfdf;
 }
 
 h1 {
-    color: $primary-color;
+  color: $primary-color;
+}
+
+img#re-zero {
+  background-image: url("../image/hello_world.png");
 }

@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'byd3@!)i)0j*qnn36+nlzbm%fatts!7!rryz3vf+jl92@_!8!j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0']
 
@@ -146,7 +146,7 @@ WEBPACK_LOADER = {
 
 if not DEBUG:
     WEBPACK_LOADER['DEFAULT'].update({
-        'CACHE': True,
+        'CACHE': False,
         'BUNDLE_DIR_NAME': 'prod/',
         'STATS_FILE': os.path.join(BASE_DIR, '../webpack-stats.prod.json'),
     })

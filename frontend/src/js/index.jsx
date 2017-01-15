@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import ReactDom from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
@@ -12,18 +14,15 @@ ReactDom.render(
 );
 
 if (module.hot) {
-    module.hot.accept('./App', () => {
-        // noinspection Eslint
-        const NextApp = require('js/App').default;
-        ReactDom.render(
-          <AppContainer>
-            <NextApp />
-          </AppContainer>,
-          document.getElementById('root'),
-        );
-    });
-    // document.querySelectorAll('link[href][rel=stylesheet]').forEach((link) => {
-    //     const nextStyleHref = link.href.replace(/(\?\d+)?$/, `?${Date.now()}`);
-    //     link.href = nextStyleHref;
-    // });
+  // $FlowFixMe
+  module.hot.accept('./App', () => {
+    // $FlowFixMe
+    const NextApp = require('js/App').default;
+    ReactDom.render(
+      <AppContainer>
+        <NextApp />
+      </AppContainer>,
+      document.getElementById('root'),
+    );
+  });
 }

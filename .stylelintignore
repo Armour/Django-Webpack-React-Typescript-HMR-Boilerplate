@@ -1,5 +1,4 @@
 node_modules/
 frontend/dist/
-frontend/src/flow/
 backend/static/
 pyenv/
