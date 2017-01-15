@@ -9,8 +9,13 @@ body {
 
 h1 {
   color: $primary-color;
+  text-align: center;
 }
 
-img#re-zero {
-  background-image: url("../image/hello_world.png");
+img {
+  width: 50%;
+}
+
+img#re-zero-1 {
+  content: url("../image/hello_world.png");
 }

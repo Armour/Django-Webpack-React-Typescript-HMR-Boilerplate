@@ -13,6 +13,7 @@ ReactDom.render(
   document.getElementById('root'),
 );
 
+// Hot Reload Module API
 if (module.hot) {
   // $FlowFixMe
   module.hot.accept('./App', () => {

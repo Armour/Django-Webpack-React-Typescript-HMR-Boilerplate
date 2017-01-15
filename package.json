@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build-dll": "webpack --color --config webpack.config.dll.babel.js",
-    "build-dev": "webpack-dev-server --color --inline --hot --config webpack.config.dev.babel.js",
+    "build-dev": "webpack-dev-server --color --config webpack.config.dev.babel.js",
     "build-prod": "webpack --color --config webpack.config.prod.babel.js"
   },
   "dependencies": {
@@ -14,11 +14,11 @@
     "del": "^2.2.2",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "gulp": "^3.9.1",
-    "gulp-run": "^1.7.1",
     "postcss-cssnext": "^2.9.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-hot-loader": "v3.0.0-beta.6",
+    "run-sequence": "^1.2.2",
     "stylelint": "v7.6.0",
     "stylelint-config-standard": "^15.0.1",
     "webpack": "v2.2.0-rc.3",

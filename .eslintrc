@@ -18,6 +18,8 @@
   "rules": {
     "indent": [2, 2],
     "global-require": 0,
+    "no-console": 0,
+    "max-len": 0,
     "import/export": 2,
     "import/first": 2,
     "import/no-deprecated": 1,
