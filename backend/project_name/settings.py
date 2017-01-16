@@ -25,6 +25,9 @@ SECRET_KEY = 'byd3@!)i)0j*qnn36+nlzbm%fatts!7!rryz3vf+jl92@_!8!j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# Use cache or not
+USE_CACHE = False
+
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0']
 
 
@@ -133,7 +136,7 @@ STATICFILES_DIRS = [os.path.join(FRONTEND_ROOT, 'dist')]
 
 WEBPACK_LOADER = {
     'DLL': {
-        'CACHE': not DEBUG,
+        'CACHE': not DEBUG and USE_CACHE,
         'BUNDLE_DIR_NAME': 'dll/',
         'STATS_FILE': os.path.join(BASE_DIR, '../webpack-stats.dll.json'),
     },
@@ -146,7 +149,7 @@ WEBPACK_LOADER = {
 
 if not DEBUG:
     WEBPACK_LOADER['DEFAULT'].update({
-        'CACHE': False,
+        'CACHE': USE_CACHE,
         'BUNDLE_DIR_NAME': 'prod/',
         'STATS_FILE': os.path.join(BASE_DIR, '../webpack-stats.prod.json'),
     })

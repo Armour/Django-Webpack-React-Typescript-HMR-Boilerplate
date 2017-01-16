@@ -65,7 +65,10 @@ export default {
         include: path.resolve(__dirname, 'frontend/src/image/'),
         use: [
           {
-            loader: 'file-loader',
+            loader: 'url-loader',
+            options: {
+              limit: 10000,
+            },
           },
           {
             loader: 'image-webpack-loader',

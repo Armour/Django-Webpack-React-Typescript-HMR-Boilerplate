@@ -55,22 +55,18 @@ export default {
         test: /\.scss$/,
         include: path.resolve(__dirname, 'frontend/src/css/'),
         use: [
-          'style-loader',
-          'css-loader',
-          'postcss-loader',
-          'sass-loader',
-          // {
-          //   loader: 'style-loader',
-          // },
-          // {
-          //   loader: 'css-loader',
-          // },
-          // {
-          //   loader: 'postcss-loader',
-          // },
-          // {
-          //   loader: 'sass-loader',
-          // },
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'postcss-loader',
+          },
+          {
+            loader: 'sass-loader',
+          },
         ],
       },
       // Use url-loader to load images in development
@@ -80,6 +76,15 @@ export default {
         use: [
           {
             loader: 'url-loader',
+            options: {
+              limit: 10000,
+            },
+          },
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              optimizationLevel: 7,
+            },
           },
         ],
       },
@@ -131,7 +136,7 @@ export default {
 
   // Webpack-dev-server config goes here
   devServer: {
-    // Where the webpack dev server serve the static files, should be the same with output.path
+    // Where the webpack dev server serve the static files, should be the same as output.path
     contentBase: path.resolve(__dirname, 'frontend/dist/dev'),
     // Enable hot reload
     hot: true,
@@ -139,7 +144,7 @@ export default {
     inline: true,
     // Port number for webpack dev server
     port: 3002,
-    // The public URL of the output resource directory (CDN), should be the same with output.publicPath
+    // The public URL of the output resource directory (CDN), should be the same as output.publicPath
     publicPath: 'http://localhost:3002/',
   },
 
