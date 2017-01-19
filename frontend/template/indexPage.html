@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load render_bundle from webpack_loader %}
+{% render_bundle 'app' 'css' 'DEFAULT' %}
+
+{% block main %}
+  <h1>View 1</h1>
+  <div id="root"></div>
+  {% render_bundle 'react' 'js' 'DLL' %}
+  {% render_bundle 'app' 'js' 'DEFAULT' %}
+{% endblock %}
