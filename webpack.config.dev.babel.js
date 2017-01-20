@@ -20,7 +20,7 @@ export default {
       // Important! 'react-hot-loader/patch' must goes first
       // https://github.com/gaearon/redux-devtools/commit/64f58b7010a1b2a71ad16716eb37ac1031f93915#diff-efacb933fc2cf0fd7e8dacf55a958839
       'react-hot-loader/patch',
-      'webpack-dev-server/client?http://localhost:3002/',
+      'webpack-dev-server/client?http://localhost:3003/',
       'webpack/hot/only-dev-server',
       './frontend/src/js/index',
     ],
@@ -34,7 +34,7 @@ export default {
     filename: '[name].js',
     // publicPath: specifies the public URL of the output resource directory (CDN)
     // https://webpack.js.org/configuration/output/#output-publicpath
-    publicPath: 'http://localhost:3002/',
+    publicPath: 'http://localhost:3003/',
   },
 
   // Determine how the different types of modules within a project will be treated
@@ -143,9 +143,9 @@ export default {
     // Enable inline mode
     inline: true,
     // Port number for webpack dev server
-    port: 3002,
+    port: 3003,
     // The public URL of the output resource directory (CDN), should be the same as output.publicPath
-    publicPath: 'http://localhost:3002/',
+    publicPath: 'http://localhost:3003/',
   },
 
   // Disable webpack asset size limit performance warning

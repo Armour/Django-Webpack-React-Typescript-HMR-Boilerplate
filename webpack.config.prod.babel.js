@@ -28,9 +28,6 @@ export default {
     path: path.resolve(__dirname, 'frontend/dist/prod'),
     // filename: specifies the name of output file on disk (required)
     filename: '[name]-[chunkhash:10].js',
-    // publicPath: relative to server
-    // https://webpack.js.org/configuration/output/#output-publicpath
-    publicPath: '/static/prod/',
   },
 
   // Determine how the different types of modules within a project will be treated
