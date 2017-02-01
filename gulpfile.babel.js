@@ -1,5 +1,3 @@
-// @flow
-
 import gulp from 'gulp';
 import yargs from 'yargs';
 import del from 'del';

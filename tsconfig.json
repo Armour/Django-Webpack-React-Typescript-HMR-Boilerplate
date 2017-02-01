@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "es6",
+    "target": "es6",
+    "jsx": "preserve",
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noEmitOnError": true,
+    "preserveConstEnums": true,
+    "removeComments": false,
+    "moduleResolution": "node",
+    "baseUrl": "frontend/src",
+    "typeRoots": [
+      "node_modules/@types",
+      "frontend/src/typings"
+    ]
+  }
+}

@@ -1,5 +1,3 @@
-// @flow
-
 import path from 'path';
 import webpack from 'webpack';
 import cssnext from 'postcss-cssnext';
@@ -40,14 +38,28 @@ export default {
   // Determine how the different types of modules within a project will be treated
   module: {
     rules: [
-      // Use babel-loader for js and jsx files
+      // Use awesome-typescript-loader and babel-loader for ts(x) files
       {
-        test: /\.jsx?$/,
+        test: /\.tsx?$/,
         include: path.resolve(__dirname, 'frontend/src/js/'),
         use: [
           {
             loader: 'babel-loader',
           },
+          {
+            loader: 'awesome-typescript-loader',
+            options: {
+              // Use those two flags to speed up babel compilation
+              // https://github.com/s-panferov/awesome-typescript-loader#differences-between-ts-loader
+              useBabel: true,
+              useCache: true,
+            },
+          },
+          // Alternatively, we can use ts-loader instead of awesome-typescript-loader
+          // TODO: Have no idea why using ts-loader will cause the entire page reload, so go with atl now
+          // {
+          //   loader: 'ts-loader',
+          // },
         ],
       },
       // Use a list of loaders to load and compile scss files to css files
@@ -82,9 +94,6 @@ export default {
           },
           {
             loader: 'image-webpack-loader',
-            options: {
-              optimizationLevel: 7,
-            },
           },
         ],
       },
@@ -95,7 +104,7 @@ export default {
     // Enable hot module reload, if have --hot parameter in npm script, then this line must be removed!
     new webpack.HotModuleReplacementPlugin(),
     // Not emit assets when there is an error while compiling
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     // Better webpack module name display
     new webpack.NamedModulesPlugin(),
     // Use cssnext in postcss when loading scss
@@ -127,6 +136,8 @@ export default {
     ],
     // Automatically resolve certain extensions (Ex. import 'folder/name(.ext)')
     extensions: [
+      '.ts',
+      '.tsx',
       '.js',
       '.jsx',
       '.json',

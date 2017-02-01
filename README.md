@@ -1,4 +1,4 @@
-# Django-Webpack-React-ES6-Boilerplate
+# Django-Webpack-React-Typescript-HMR-Boilerplate
 
 ## Install && Run
 
@@ -40,8 +40,19 @@ You can safely ignore all the warnings during installation, as we are using some
 
 If you meet permission problem for global install, check [this](https://github.com/yarnpkg/yarn/issues/1060#issuecomment-268160528) out.
 
+### Install typings for Typescript support
+
+~~~bash
+typings install
+~~~
+
 
 ### Set up python virtual environment
+
+~~~bash
+pyenv install 3.6.0
+pyenv local 3.6.0
+~~~
 
 ~~~bash
 pip install virtualenv
@@ -127,4 +138,6 @@ Don't forget to setup Apache or Nginx with Django to support static files
 
 ### Future work
 
-### Licenses
+### License
+
+GNU License

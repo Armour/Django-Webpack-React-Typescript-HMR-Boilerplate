@@ -1,10 +1,7 @@
-// @flow
-
 import React from 'react';
 
 import 'css/index.scss';
 import reZero from 'image/hello_world.png';
-
 
 function App() {
   return (

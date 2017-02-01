@@ -1,10 +1,11 @@
 .idea/
+.awcache/
 node_modules/
 pyenv/
-frontend/dist/
 backend/static/
+frontend/dist/
 .python-version
-npm-debug.log
 webpack-stats.*.json
 *.pyc
 *.swp
+*.log
