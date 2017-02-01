@@ -6,7 +6,7 @@
 
 * `yarn` (or `npm`)
 * `python 3` with `virtualenv`
-* `postgresql` (or other databases)
+* `postgresql` (or other database that you want)
 
 ##### On Mac OS:
 
@@ -36,23 +36,21 @@ yarn install
 yarn global add gulp
 ~~~
 
-You can safely ignore all the warnings during installation, as we are using some beta packages.
-
 If you meet permission problem for global install, check [this](https://github.com/yarnpkg/yarn/issues/1060#issuecomment-268160528) out.
-
-### Install typings for Typescript support
-
-~~~bash
-typings install
-~~~
 
 
 ### Set up python virtual environment
 
+If you don't have python 3.6.0 installed, you can choose to use [pyenv](https://github.com/yyuu/pyenv)
+
 ~~~bash
+brew install pyenv
 pyenv install 3.6.0
 pyenv local 3.6.0
 ~~~
+
+After that, create a virtual python environment using python 3.6.0, naming the folder as `pyenv` which has been added to `.gitignore`
+
 
 ~~~bash
 pip install virtualenv
@@ -61,21 +59,20 @@ source pyenv/bin/activate
 pip install -r backend/requirements.txt
 ~~~
 
-`pyenv` folder has been added to `.gitignore`
-
-
 ### Customize your django setting
 
 ~~~bash
 vim backend/project_name/settings.py
 ~~~
 
+You probably want to change:
+
 1. Database
 2. Timezone
-3. Cache
+3. Cache Method
 4. Others
 
-(if you are using `postgresql`, then the default setting is good to go)
+(if you are using `postgresql`, then the default setting is good to go, otherwise you may need to install database driver for your own database)
 
 
 ### Run gulp with webpack to generate bundle assets
@@ -105,7 +102,7 @@ cd backend
 vim project_name/settings.py
 ~~~
 
-Set `DEBUG` to `True`
+Set `DEBUG` to `True` (Default)
 
 ~~~bash
 python manage.py makemigrations
@@ -128,7 +125,7 @@ python manage.py collectstatic
 python manage.py runserver 0.0.0.0:8000
 ~~~
 
-Don't forget to setup Apache or Nginx with Django to support static files
+Don't forget to setup Apache or Nginx with Django to support static files on production env.
 
 ### Backend
 
