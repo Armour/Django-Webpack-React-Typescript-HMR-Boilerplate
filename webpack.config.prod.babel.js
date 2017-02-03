@@ -16,7 +16,7 @@ export default {
   // Start entry point(s)
   entry: {
     app: [
-      './frontend/src/js/index',
+      './frontend/src/tsx/index',
     ],
   },
 
@@ -34,7 +34,7 @@ export default {
       // Use awesome-typescript-loader and babel-loader for ts(x) files
       {
         test: /\.tsx?$/,
-        include: path.resolve(__dirname, 'frontend/src/js/'),
+        include: path.resolve(__dirname, 'frontend/src/tsx/'),
         use: [
           {
             loader: 'babel-loader',
@@ -58,7 +58,7 @@ export default {
       // Use ExtractTextPlugin and list of loaders to load and compile scss files to css files
       {
         test: /\.scss$/,
-        include: path.resolve(__dirname, 'frontend/src/css/'),
+        include: path.resolve(__dirname, 'frontend/src/sass/'),
         loader: ExtractTextPlugin.extract({
           fallbackLoader: 'style-loader',
           loader: [
@@ -70,7 +70,7 @@ export default {
       },
       // Use file-loader and image-loader to load images
       {
-        test: /.*\.(png|jpe?g|gif|svg)$/,
+        test: /\.(png|jpe?g|gif|svg)$/,
         include: path.resolve(__dirname, 'frontend/src/image/'),
         use: [
           {
@@ -84,6 +84,15 @@ export default {
             options: {
               optimizationLevel: 7,
             },
+          },
+        ],
+      },
+      // Use file-loader to load font related files
+      {
+        test: /\.(eot|woff2?|ttf)$/,
+        use: [
+          {
+            loader: 'file-loader',
           },
         ],
       },
@@ -113,6 +122,13 @@ export default {
         NODE_ENV: JSON.stringify('production'),
       },
     }),
+    // jQuery support
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+      'root.jQuery': 'jquery',
+    }),
     // Load pre-build react dll reference files
     new webpack.DllReferencePlugin({
       manifest: ReactManifest,
@@ -132,6 +148,7 @@ export default {
     modules: [
       'node_modules',
       'frontend/src',
+      'frontend/materialize',
     ],
     // Automatically resolve certain extensions (Ex. import 'folder/name(.ext)')
     extensions: [

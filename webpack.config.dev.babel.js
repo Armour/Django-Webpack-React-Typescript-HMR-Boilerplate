@@ -20,7 +20,7 @@ export default {
       'react-hot-loader/patch',
       'webpack-dev-server/client?http://localhost:3003/',
       'webpack/hot/only-dev-server',
-      './frontend/src/js/index',
+      './frontend/src/tsx/index',
     ],
   },
 
@@ -41,7 +41,7 @@ export default {
       // Use awesome-typescript-loader and babel-loader for ts(x) files
       {
         test: /\.tsx?$/,
-        include: path.resolve(__dirname, 'frontend/src/js/'),
+        include: path.resolve(__dirname, 'frontend/src/tsx/'),
         use: [
           {
             loader: 'babel-loader',
@@ -65,7 +65,7 @@ export default {
       // Use a list of loaders to load and compile scss files to css files
       {
         test: /\.scss$/,
-        include: path.resolve(__dirname, 'frontend/src/css/'),
+        include: path.resolve(__dirname, 'frontend/src/sass/'),
         use: [
           {
             loader: 'style-loader',
@@ -83,7 +83,7 @@ export default {
       },
       // Use url-loader to load images in development
       {
-        test: /.*\.(png|jpe?g|gif|svg)$/,
+        test: /\.(png|jpe?g|gif|svg)$/,
         include: path.resolve(__dirname, 'frontend/src/image/'),
         use: [
           {
@@ -94,6 +94,15 @@ export default {
           },
           {
             loader: 'image-webpack-loader',
+          },
+        ],
+      },
+      // Use file-loader to load font related files
+      {
+        test: /\.(eot|woff2?|ttf)$/,
+        use: [
+          {
+            loader: 'file-loader',
           },
         ],
       },
@@ -116,6 +125,13 @@ export default {
         },
       },
     }),
+    // jQuery support
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+      'root.jQuery': 'jquery',
+    }),
     // Load pre-build react dll reference files
     new webpack.DllReferencePlugin({
       manifest: ReactManifest,
@@ -133,6 +149,7 @@ export default {
     modules: [
       'node_modules',
       'frontend/src',
+      'frontend/materialize',
     ],
     // Automatically resolve certain extensions (Ex. import 'folder/name(.ext)')
     extensions: [
@@ -151,10 +168,13 @@ export default {
     contentBase: path.resolve(__dirname, 'frontend/dist/dev'),
     // Enable hot reload
     hot: true,
-    // Enable inline mode
-    inline: true,
     // Port number for webpack dev server
     port: 3003,
+    // Allow CORS
+    // https://github.com/gaearon/react-hot-loader/blob/master/docs/Troubleshooting.md#no-access-control-allow-origin-header-is-present-on-the-requested-resource
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
     // The public URL of the output resource directory (CDN), should be the same as output.publicPath
     publicPath: 'http://localhost:3003/',
   },

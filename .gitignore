@@ -9,3 +9,5 @@ webpack-stats.*.json
 *.pyc
 *.swp
 *.log
+.DS_Store
+__pycache__

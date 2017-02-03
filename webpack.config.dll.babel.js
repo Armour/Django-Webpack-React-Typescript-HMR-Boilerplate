@@ -7,10 +7,8 @@ import BundleTracker from 'webpack-bundle-tracker';
 const reactVendors = [
   'react',
   'react-dom',
-  // 'react-native',
+  'react-router',
   // 'react-redux',
-  // 'react-router',
-  // 'redux',
 ];
 
 export default {

@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
-import App from 'js/App';
+
+import App from 'tsx/App';
 
 ReactDom.render(
   <AppContainer>
@@ -13,7 +14,7 @@ ReactDom.render(
 // Hot Reload Module API
 if (module.hot) {
   module.hot.accept('./App', () => {
-    const NextApp = require('js/App').default;
+    const NextApp = require('tsx/App').default;
     ReactDom.render(
       <AppContainer>
         <NextApp />
