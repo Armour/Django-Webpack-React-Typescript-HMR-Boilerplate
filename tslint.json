@@ -3,13 +3,18 @@
   "rules": {
     "curly": true, // Enforces braces for if/for/do/while statements
     "eofline": true, // Ensures the file ends with a newline
-    "indent": [true, "spaces"], // Enforce use spaces
+    "ter-indent": [true, 2], // Enforce use 2 spaces
     "quotemark": [true, "single", "jsx-double"], // Enfore single quote for tsx and double quote for jsx part
     "no-console": [true, "log"], // Disallow console.log, allow warning and error
     "no-magic-numbers": [true, -1, 0, 1, 2, 3], // Disallows the use of constant number values except -1 ~ 3
     "no-reference": true, // Disallows `/// <reference path=>` imports (use ES6-style imports instead)
     "no-duplicate-variable": true, // Disallows duplicate variable declarations in the same block scope
     "no-trailing-whitespace": true, // Disallows trailing whitespace at the end of a line
+    "no-constant-condition": true, // Disallow use of constant expressions in conditions
+    "no-control-regex": true, // Disallow control characters in regular expressions
+    "no-duplicate-case": true, // Disallow a duplicate case label
+    "no-extra-semi": true, // Disallow unnecessary semicolons
+    "no-invalid-regexp": true, // Disallow invalid regular expression strings in the RegExp constructor
     "only-arrow-functions": true, // Disallows traditional (non-arrow) function expressions
     "switch-default": true, // Require a default case in all switch statements
     "triple-equals": [true, "allow-null-check"], // Requires === and !== in place of == and !=
@@ -29,5 +34,6 @@
       "check-typecast",
       "check-preblock"
     ] // Enforces whitespace style conventions
-  }
+  },
+  "rulesDirectory": "node_modules/tslint-eslint-rules/dist/rules"
 }
