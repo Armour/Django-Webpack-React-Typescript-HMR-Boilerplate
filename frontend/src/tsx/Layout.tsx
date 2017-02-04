@@ -11,14 +11,14 @@ interface ILayoutState {}
 class Layout extends React.Component<ILayoutProps, ILayoutState> {
   public render() {
     return (
-        <div>
-          <Header />
-          {this.props.children}
-          <FAB/>
-          <Footer/>
-        </div>
+      <div>
+        <Header />
+        {this.props.children}
+        <FAB/>
+        <Footer/>
+      </div>
     );
-  };
+  }
 }
 
 export default Layout;

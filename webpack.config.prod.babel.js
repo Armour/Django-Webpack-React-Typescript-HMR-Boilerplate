@@ -81,9 +81,6 @@ export default {
           },
           {
             loader: 'image-webpack-loader',
-            options: {
-              optimizationLevel: 7,
-            },
           },
         ],
       },

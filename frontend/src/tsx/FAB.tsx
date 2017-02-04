@@ -18,7 +18,7 @@ class FAB extends React.Component<IFABProps, IFABState> {
         </ul>
       </div>
     );
-  };
+  }
 }
 
 export default FAB;

@@ -1,4 +1,10 @@
-@import "../../materialize/sass/materialize.scss";
+@charset "UTF-8";
+
+@import "materialize/color";
+@import "materialize/variables";
+@import "materialize/normalize";
+@import "materialize/global";
+@import "materialize/typography";
+@import "materialize/waves";
 
 $primary-color: color("blue", "base");
-

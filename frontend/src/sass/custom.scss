@@ -1,3 +1,6 @@
+@import "materialize/buttons";
+@import "materialize/icons-material-design";
+
 h1 {
   color: $primary-color;
   text-align: center;
@@ -5,8 +8,9 @@ h1 {
 
 img {
   width: 50%;
+
+  &.re-zero {
+    content: url("../image/hello_world.png");
+  }
 }
 
-img#re-zero-1 {
-  content: url("../image/hello_world.png");
-}

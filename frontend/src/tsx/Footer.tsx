@@ -33,7 +33,7 @@ class Footer extends React.Component<IFooterProps, IFooterState> {
         </div>
       </footer>
     );
-  };
+  }
 }
 
 export default Footer;
