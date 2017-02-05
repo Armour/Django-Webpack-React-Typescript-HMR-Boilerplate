@@ -1,6 +1,7 @@
 from django.conf.urls import url
-from app_name import views
+from django.http import HttpResponse
 
 urlpatterns = [
-    url(r'^.*$', views.HomePageView.as_view()),
+    # API url goes here
+    url(r'', lambda request: HttpResponse('Hello World!'), name='hello_world'),
 ]
