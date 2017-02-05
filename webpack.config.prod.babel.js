@@ -70,7 +70,7 @@ export default {
       },
       // Use file-loader and image-loader to load images
       {
-        test: /\.(png|jpe?g|gif|svg)$/,
+        test: /\.(png|jpe?g|gif|svg|ico)$/,
         include: path.resolve(__dirname, 'frontend/src/image/'),
         use: [
           {

@@ -1,23 +1,23 @@
 import React from 'react';
-import { Route, Router, browserHistory } from 'react-router';
+import { IndexRoute, Route, Router, browserHistory } from 'react-router';
 
-import Custom from 'tsx/Custom';
+import Home from 'tsx/Home';
 import Layout from 'tsx/Layout';
 import Page1 from 'tsx/Page1';
 import Page2 from 'tsx/Page2';
 
-import 'js/bin/materialize';
+import 'js/bin/materialize.min';
 
 import 'sass/index.scss';
 
 export default () => {
   return (
-    <Layout>
-      <Router history={browserHistory}>
-        <Route path="/" component={Custom}/>
+    <Router history={browserHistory}>
+      <Route path="/" component={Layout}>
+        <IndexRoute component={Home}/>
         <Route path="/page1" component={Page1}/>
         <Route path="/page2" component={Page2}/>
-      </Router>
-    </Layout>
+      </Route>
+    </Router>
   );
 };

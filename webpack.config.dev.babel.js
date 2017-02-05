@@ -83,7 +83,7 @@ export default {
       },
       // Use url-loader to load images in development
       {
-        test: /\.(png|jpe?g|gif|svg)$/,
+        test: /\.(png|jpe?g|gif|svg|ico)$/,
         include: path.resolve(__dirname, 'frontend/src/image/'),
         use: [
           {
@@ -174,6 +174,10 @@ export default {
     // https://github.com/gaearon/react-hot-loader/blob/master/docs/Troubleshooting.md#no-access-control-allow-origin-header-is-present-on-the-requested-resource
     headers: {
       'Access-Control-Allow-Origin': '*',
+    },
+    // The history api fallback url, should be the same as output.publicPath
+    historyApiFallback: {
+      index: 'http://localhost:3003/',
     },
     // The public URL of the output resource directory (CDN), should be the same as output.publicPath
     publicPath: 'http://localhost:3003/',
