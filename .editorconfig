@@ -10,12 +10,17 @@ end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-# Indentation override for all js and jsx files
-[*.jsx?]
+# Indentation override for js and json files
+[*.{js,jsx,ts,tsx,json}]
 indent_size = 2
 indent_style = space
 
-# Indentation override for package.json
-[package.json]
+# Indentation override for css files
+[*.{css,styl,scss,less,sass}]
+indent_size = 2
+indent_style = space
+
+# Indentation override for all html files
+[*.html]
 indent_size = 2
 indent_style = space
