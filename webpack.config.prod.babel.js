@@ -60,8 +60,8 @@ export default {
         test: /\.scss$/,
         include: path.resolve(__dirname, 'frontend/src/sass/'),
         loader: ExtractTextPlugin.extract({
-          fallbackLoader: 'style-loader',
-          loader: [
+          fallback: 'style-loader',
+          use: [
             'css-loader',
             'postcss-loader',
             'sass-loader',

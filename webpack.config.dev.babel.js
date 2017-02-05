@@ -175,10 +175,6 @@ export default {
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
-    // The history api fallback url, should be the same as output.publicPath
-    historyApiFallback: {
-      index: 'http://localhost:3003/',
-    },
     // The public URL of the output resource directory (CDN), should be the same as output.publicPath
     publicPath: 'http://localhost:3003/',
   },
