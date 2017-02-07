@@ -15,4 +15,3 @@ class Home extends React.Component<IHomeProps, IHomeState> {
 }
 
 export default Home;
-

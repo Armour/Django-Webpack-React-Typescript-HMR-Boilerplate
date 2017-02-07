@@ -3,10 +3,37 @@ import yargs from 'yargs';
 import del from 'del';
 import runSequence from 'run-sequence';
 import childProcess from 'child_process';
+import eslint from 'gulp-eslint';
+import tslint from 'gulp-tslint';
+import stylelint from 'gulp-stylelint';
 
 const exec = childProcess.exec;
 const spawn = childProcess.spawn;
 const isProduction = yargs.argv.env === 'production';
+
+gulp.task('eslint', () =>
+  gulp.src(['**/*.js', '**/*.jsx', '!node_modules/**'])
+    .pipe(eslint())
+    .pipe(eslint.format('codeFrame'))
+    .pipe(eslint.failAfterError()),
+);
+
+gulp.task('tslint', () =>
+  gulp.src(['**/*.ts', '**/*.tsx', '!node_modules/**'])
+    .pipe(tslint({
+      formatter: 'codeFrame',
+    }))
+    .pipe(tslint.report()),
+);
+
+gulp.task('stylelint', () =>
+  gulp.src(['**/*.scss', '**/*.css', '!node_modules/**', '!**/materialize/**'])
+    .pipe(stylelint({
+      reporters: [
+        { formatter: 'string', console: true },
+      ],
+    })),
+);
 
 gulp.task('webpack:clean', () => del(['frontend/dist', 'webpack-stats.*.json']));
 
@@ -50,4 +77,6 @@ gulp.task('webpack:build', ['webpack:build-dll'], (callback) => {
   }
 });
 
-gulp.task('default', ['webpack:build']);
+gulp.task('default', (callback) => {
+  runSequence('eslint', 'tslint', 'stylelint', 'webpack:build', callback);
+});

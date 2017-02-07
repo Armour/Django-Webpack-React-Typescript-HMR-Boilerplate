@@ -6,7 +6,7 @@ import BundleTracker from 'webpack-bundle-tracker';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import WebpackMd5Hash from 'webpack-md5-hash';
 
-import * as ReactManifest from './frontend/dist/dll/react_manifest.json';
+import * as ReactManifest from './frontend/dist/dll/react_manifest.json'; // eslint-disable-line import/no-unresolved
 
 
 export default {
@@ -70,7 +70,7 @@ export default {
       },
       // Use file-loader and image-loader to load images
       {
-        test: /\.(png|jpe?g|gif|svg|ico)$/,
+        test: /\.(png|jpe?g|gif|svg)$/,
         include: path.resolve(__dirname, 'frontend/src/image/'),
         use: [
           {

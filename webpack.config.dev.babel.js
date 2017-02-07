@@ -5,7 +5,7 @@ import cssnext from 'postcss-cssnext';
 import BundleTracker from 'webpack-bundle-tracker';
 import WebpackMd5Hash from 'webpack-md5-hash';
 
-import * as ReactManifest from './frontend/dist/dll/react_manifest.json';
+import * as ReactManifest from './frontend/dist/dll/react_manifest.json'; // eslint-disable-line import/no-unresolved
 
 
 export default {
@@ -82,7 +82,7 @@ export default {
       },
       // Use url-loader to load images in development
       {
-        test: /\.(png|jpe?g|gif|svg|ico)$/,
+        test: /\.(png|jpe?g|gif|svg)$/,
         include: path.resolve(__dirname, 'frontend/src/image/'),
         use: [
           {
