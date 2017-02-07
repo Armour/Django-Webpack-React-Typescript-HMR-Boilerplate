@@ -56,7 +56,6 @@ export default {
             },
           },
           // Alternatively, we can use ts-loader instead of awesome-typescript-loader
-          // TODO: Have no idea why using ts-loader will cause the entire page reload, so go with atl now
           // {
           //   loader: 'ts-loader',
           // },

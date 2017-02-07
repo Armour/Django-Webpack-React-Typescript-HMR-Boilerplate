@@ -8,7 +8,8 @@ const reactVendors = [
   'react',
   'react-dom',
   'react-router',
-  // 'react-redux',
+  'react-redux',
+  'redux',
 ];
 
 export default {

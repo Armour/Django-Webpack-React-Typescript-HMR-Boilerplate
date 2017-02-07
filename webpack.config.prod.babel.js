@@ -25,6 +25,7 @@ export default {
     // path: the output directory as an absolute path (required)
     path: path.resolve(__dirname, 'frontend/dist/prod'),
     // filename: specifies the name of output file on disk (required)
+    // Use hash string to handle client side cache problem
     filename: '[name]-[chunkhash:10].js',
   },
 
@@ -49,7 +50,6 @@ export default {
             },
           },
           // Alternatively, we can use ts-loader instead of awesome-typescript-loader
-          // TODO: Have no idea why using ts-loader will cause the entire page reload, so go with atl now
           // {
           //   loader: 'ts-loader',
           // },
