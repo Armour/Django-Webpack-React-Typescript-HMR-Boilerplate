@@ -5,7 +5,8 @@ import cssnext from 'postcss-cssnext';
 import BundleTracker from 'webpack-bundle-tracker';
 import WebpackMd5Hash from 'webpack-md5-hash';
 
-import * as ReactManifest from './frontend/dist/dll/react_manifest.json'; // eslint-disable-line import/no-unresolved
+// eslint-disable-next-line import/no-unresolved
+import * as ReactManifest from './frontend/dist/dll/react_manifest.json';
 
 
 export default {
@@ -20,7 +21,7 @@ export default {
       'react-hot-loader/patch',
       'webpack-dev-server/client?http://localhost:3003/',
       'webpack/hot/only-dev-server',
-      './frontend/src/tsx/index',
+      './frontend/src/index',
     ],
   },
 
@@ -41,7 +42,7 @@ export default {
       // Use awesome-typescript-loader and babel-loader for ts(x) files
       {
         test: /\.tsx?$/,
-        include: path.resolve(__dirname, 'frontend/src/tsx/'),
+        include: path.resolve(__dirname, 'frontend/src/'),
         use: [
           {
             loader: 'babel-loader',
@@ -64,7 +65,7 @@ export default {
       // Use a list of loaders to load and compile scss files to css files
       {
         test: /\.scss$/,
-        include: path.resolve(__dirname, 'frontend/src/sass/'),
+        include: path.resolve(__dirname, 'frontend/src/'),
         use: [
           {
             loader: 'style-loader',
@@ -83,7 +84,7 @@ export default {
       // Use url-loader to load images in development
       {
         test: /\.(png|jpe?g|gif|svg)$/,
-        include: path.resolve(__dirname, 'frontend/src/image/'),
+        include: path.resolve(__dirname, 'frontend/src/'),
         use: [
           {
             loader: 'url-loader',
@@ -96,12 +97,15 @@ export default {
           },
         ],
       },
-      // Use file-loader to load font related files
+      // Use file-loader to load font related files and icon
       {
-        test: /\.(eot|woff2?|ttf)$/,
+        test: /\.(eot|woff2?|ttf|ico)$/,
         use: [
           {
             loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+            },
           },
         ],
       },

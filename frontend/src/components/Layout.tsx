@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Footer from 'tsx/Footer';
-import Header from 'tsx/Header';
+import Footer from 'components/Footer';
+import Header from 'components/Header';
 
-import FAB from 'tsx/FAB';
+import FAB from 'components/FAB';
 
 interface ILayoutProps {}
 interface ILayoutState {}

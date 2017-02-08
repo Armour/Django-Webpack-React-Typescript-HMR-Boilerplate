@@ -6,9 +6,13 @@
   version "2.0.34"
   resolved "https://registry.yarnpkg.com/@types/hammerjs/-/hammerjs-2.0.34.tgz#9cbac4f41cb039436141785e1be50b3ab10a04a9"
 
-"@types/history@^2":
+"@types/history@*":
   version "2.0.46"
   resolved "https://registry.yarnpkg.com/@types/history/-/history-2.0.46.tgz#0a62c9ddf4f37a9f7ff5fa27d63adc603a046fd9"
+
+"@types/history@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@types/history/-/history-4.5.0.tgz#2f5c3aad4fbd00f89e99b83083e354bc5308e307"
 
 "@types/jquery@*", "@types/jquery@^2.0.40":
   version "2.0.40"
@@ -31,9 +35,9 @@
   dependencies:
     "@types/jquery" "*"
 
-"@types/react-dom@^0.14.22":
-  version "0.14.22"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-0.14.22.tgz#a9a9d2c1461dda668a8bbaef8d62f6abc7d6b9bd"
+"@types/react-dom@^0.14.23":
+  version "0.14.23"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-0.14.23.tgz#cecfcfad754b4c2765fe5d29b81b301889ad6c2e"
   dependencies:
     "@types/react" "*"
 
@@ -43,16 +47,31 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-router@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-3.0.0.tgz#59168a10f9aa38fe88d6b66e1e0e4426798b7941"
+"@types/react-redux@^4.4.36":
+  version "4.4.36"
+  resolved "https://registry.yarnpkg.com/@types/react-redux/-/react-redux-4.4.36.tgz#5d1e768f3291c66c8e54d8a48e42f7cb554a7d87"
   dependencies:
-    "@types/history" "^2"
+    "@types/react" "*"
+    redux "^3.6.0"
+
+"@types/react-router-redux@^4.0.40":
+  version "4.0.40"
+  resolved "https://registry.yarnpkg.com/@types/react-router-redux/-/react-router-redux-4.0.40.tgz#5975741e31c0d7a24fbd0433ce4b99778950544d"
+  dependencies:
+    "@types/history" "*"
+    "@types/react-router" "*"
+    redux "^3.6.0"
+
+"@types/react-router@*", "@types/react-router@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-3.0.1.tgz#7054bc6e160965dfbb61b55d0d68b53b79910ea4"
+  dependencies:
+    "@types/history" "*"
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^15.0.6":
-  version "15.0.6"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-15.0.6.tgz#c76083c1abec8e1371be79527daa7e404ae6fc62"
+"@types/react@*", "@types/react@^15.0.7":
+  version "15.0.7"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-15.0.7.tgz#f8e74c68602844fcc43ba6fbd111caf98e98f9ef"
 
 "@types/source-map@*":
   version "0.5.0"
@@ -72,9 +91,9 @@
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/@types/webpack-env/-/webpack-env-1.13.0.tgz#3044381647e11ee973c5af2e925323930f691d80"
 
-"@types/webpack@^2.2.4":
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-2.2.4.tgz#05afb4af5b7ece8a4d491030e94c769c7a9bc110"
+"@types/webpack@^2.2.5":
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-2.2.5.tgz#fdd98f969ba5da0d548c2a3c05a1975c9107cc05"
   dependencies:
     "@types/node" "*"
     "@types/tapable" "*"
@@ -4223,7 +4242,7 @@ lodash.uniq@^4.3.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-lodash@^4.0.0, lodash@^4.1.0, lodash@^4.11.1, lodash@^4.14.0, lodash@^4.17.2, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.6.1:
+lodash@^4.0.0, lodash@^4.1.0, lodash@^4.14.0, lodash@^4.17.2, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.6.1:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -5285,7 +5304,7 @@ postcss-media-minmax@^2.1.0:
   dependencies:
     postcss "^5.0.4"
 
-postcss-media-query-parser@^0.2.0, postcss-media-query-parser@^0.2.3:
+postcss-media-query-parser@^0.2.0:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/postcss-media-query-parser/-/postcss-media-query-parser-0.2.3.tgz#27b39c6f4d94f81b1a73b8f76351c609e5cef244"
 
@@ -5713,6 +5732,10 @@ react-redux@^5.0.2:
     lodash "^4.2.0"
     lodash-es "^4.2.0"
     loose-envify "^1.1.0"
+
+react-router-redux@^4.0.7:
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/react-router-redux/-/react-router-redux-4.0.7.tgz#9b1fde4e70106c50f47214e12bdd888cfb96e2a6"
 
 react-router@^3.0.2:
   version "3.0.2"
@@ -6514,18 +6537,7 @@ stylelint-config-standard@^16.0.0:
   version "16.0.0"
   resolved "https://registry.yarnpkg.com/stylelint-config-standard/-/stylelint-config-standard-16.0.0.tgz#bb7387bff1d7dd7186a52b3ebf885b2405d691bf"
 
-stylelint-scss@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/stylelint-scss/-/stylelint-scss-1.4.1.tgz#821febe57c28cc56be02b6a5b6b40a944ed74235"
-  dependencies:
-    lodash "^4.11.1"
-    postcss-media-query-parser "^0.2.3"
-    postcss-resolve-nested-selector "^0.1.1"
-    postcss-selector-parser "^2.0.0"
-    postcss-value-parser "^3.3.0"
-    stylelint "^7.0.3"
-
-stylelint@^7.0.3, stylelint@^7.6.0, stylelint@^7.7.0:
+stylelint@^7.6.0, stylelint@^7.7.0:
   version "7.8.0"
   resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-7.8.0.tgz#ac701044ed03c44f7a9f73d4d5dc1bd1eaae12d1"
   dependencies:

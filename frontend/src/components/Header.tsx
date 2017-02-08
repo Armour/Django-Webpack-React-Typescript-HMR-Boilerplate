@@ -1,6 +1,6 @@
 import React from 'react';
 
-import NavLink from 'tsx/NavLink';
+import NavLink from 'components/NavLink';
 
 interface IHeaderProps {}
 interface IHeaderState {}
