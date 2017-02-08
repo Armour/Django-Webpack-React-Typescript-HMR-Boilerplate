@@ -1,4 +1,5 @@
 # Django-Webpack-React-Typescript-HMR-Boilerplate
+[![Dependency Status](https://gemnasium.com/badges/859f8694be0794a67d3a461d8d714091.svg)](https://gemnasium.com/github.com/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate)
 
 ## Install && Run
 
