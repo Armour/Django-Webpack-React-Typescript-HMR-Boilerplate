@@ -129,7 +129,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
-# Remember to change the second string to your url that serving static files when in production env
+# Remember to change this to fit your url that serving static files when in production env
 STATIC_URL = '/static/' if DEBUG else 'http://localhost:8001/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 STATICFILES_DIRS = [os.path.join(FRONTEND_ROOT, 'dist')]

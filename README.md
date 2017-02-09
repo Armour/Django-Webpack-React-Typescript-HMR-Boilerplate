@@ -1,31 +1,39 @@
 # Django-Webpack-React-Typescript-HMR-Boilerplate
 [![Dependency Status](https://gemnasium.com/badges/859f8694be0794a67d3a461d8d714091.svg)](https://gemnasium.com/github.com/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate)
 
+My first full-stack boilerplate!
+
+## Stack
+
+- [x] [yarn](https://github.com/yarnpkg/yarn) as dependency manager
+- [x] [gulp](https://github.com/gulpjs/gulp) as task runner
+- [x] [webpack2](https://github.com/webpack/webpack) as module bundler
+- [x] followed [ES6 standard](https://github.com/lukehoban/es6features)
+- [x] [babel](https://babeljs.io/) as ES6 to ES5 compiler
+- [x] [react](https://facebook.github.io/react/) for building user interfaces.
+- [x] [react-router](https://github.com/ReactTraining/react-router) for routing
+- [x] [react-redux](https://github.com/reactjs/react-redux) the official react bindings for [redux](https://github.com/reactjs/redux) (a predictable state container for js apps)
+- [x] [react-router-redux](https://github.com/reactjs/react-router-redux) to keep react-router and redux in sync 
+- [x] [typescript](https://github.com/Microsoft/TypeScript) let's write future javascript => now!
+- [x] [react-hot-loader 3](https://github.com/gaearon/react-hot-loader) for hot module reload! 
+- [x] [editorconfig](http://editorconfig.org/) to maintain consistent coding styles between different editors and IDEs
+- [x] [eslint](http://eslint.org/) to lint javascript files (.js, .jsx)
+- [x] [tslint](https://palantir.github.io/tslint/) to lint typescript files (.ts, .tsx)
+- [x] [stylelint](https://stylelint.io/) to lint style files (.css, .scss)
+- [ ] [jest](https://facebook.github.io/jest/) for testing
+
 ## Install && Run
 
 ### Prerequisite
 
-* `yarn` (or `npm`)
-* `python 3` with `virtualenv`
+* `yarn` (recommended) or `npm`
+* `python 3.6.0` and `virtualenv` 
+    * Note: you can use `pyenv` to manage your different versions of python
 * `postgresql` (or other database that you want)
-
-##### On Mac OS:
-
-~~~bash
-brew update
-brew install yarn
-brew install postgresql
-~~~
-
-##### On Ubuntu:
 
 Install [yarn](https://yarnpkg.com/en/docs/install#linux-tab) follows official documentation.
 
-~~~bash
-sudo apt-get update
-sudo apt-get install yarn
-sudo apt-get install postgresql
-~~~
+Install [pyenv](https://github.com/yyuu/pyenv) follows official documentation.
 
 
 ### Install project dependencies
@@ -33,7 +41,7 @@ sudo apt-get install postgresql
 Go to project root directory:
 
 ~~~bash
-yarn install
+yarn
 yarn global add gulp
 ~~~
 
@@ -52,13 +60,18 @@ pyenv local 3.6.0
 
 After that, create a virtual python environment using python 3.6.0, naming the folder as `pyenv` which has been added to `.gitignore`
 
-
 ~~~bash
 pip install virtualenv
 virtualenv -p python3 pyenv
+~~~
+
+Source your virtualenv and install the required package through pip
+
+~~~bash
 source pyenv/bin/activate
 pip install -r backend/requirements.txt
 ~~~
+
 
 ### Customize your django setting
 
@@ -68,12 +81,12 @@ vim backend/project_name/settings.py
 
 You probably want to change:
 
-1. Database
+1. Database Config
 2. Timezone
 3. Cache Method
 4. Others
 
-(if you are using `postgresql`, then the default setting is good to go, otherwise you may need to install database driver for your own database)
+(if you are using `postgresql`, then create a user called `django` with `django` database, and the default setting is good to go, otherwise you may need to install database driver for your own database)
 
 
 ### Run gulp with webpack to generate bundle assets
@@ -100,15 +113,9 @@ cd backend
 **On development:**
 
 ~~~bash
-vim project_name/settings.py
-~~~
-
-Set `DEBUG` to `True` (Default)
-
-~~~bash
 python manage.py makemigrations
 python manage.py migrate
-python manage.py runserver 0.0.0.0:8000
+python manage.py runserver
 ~~~
 
 **On production:**
@@ -123,19 +130,18 @@ Set `DEBUG` to `False`
 python manage.py makemigrations
 python manage.py migrate
 python manage.py collectstatic
-python manage.py runserver 0.0.0.0:8000
+# Setup Apache or Nginx to support static files here
+python manage.py runserver
 ~~~
 
-Don't forget to setup Apache or Nginx with Django to support static files on production env.
+### Boilerplate setup tutorial step by step
 
-### Backend
+I will write a tutorial about how to setup those stuffs together step by step asap :)
 
-### Frontend
+### If you prefer use Node.js as backend
 
-### Setup tutorial step by step
-
-### Future work
+Check my [another boilerplate]() with Node.js support!
 
 ### License
 
-GNU License
+GPL-3.0 License
