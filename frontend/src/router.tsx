@@ -1,10 +1,11 @@
 import React from 'react';
 import { IndexRoute, Route } from 'react-router';
 
-import Home from 'components/Home';
+import Home from 'pages/Home';
+import Page1 from 'pages/Page1';
+import Page2 from 'pages/Page2';
+
 import Layout from 'components/Layout';
-import Page1 from 'components/Page1';
-import Page2 from 'components/Page2';
 
 export default (
   <Route path="/" component={Layout}>

@@ -3,12 +3,8 @@ h1 {
   text-align: center;
 }
 
-img {
-  width: 50%;
-
-  &.re-zero {
-    content: url("../image/hello_world.png");
-  }
+img.re-zero {
+  content: url("../image/hello_world.png");
 }
 
 .active {

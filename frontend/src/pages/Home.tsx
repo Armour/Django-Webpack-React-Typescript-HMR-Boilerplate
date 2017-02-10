@@ -7,8 +7,7 @@ class Home extends React.Component<IHomeProps, IHomeState> {
   public render() {
     return (
       <div>
-        <img className="re-zero" alt="re-zero"/>
-        <img className="re-zero" alt="re-zero"/>
+        <h1>Home</h1>
       </div>
     );
   }
