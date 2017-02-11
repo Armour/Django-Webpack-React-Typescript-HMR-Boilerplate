@@ -1,13 +1,13 @@
 # Django-Webpack-React-Typescript-HMR-Boilerplate
 [![Dependency Status](https://gemnasium.com/badges/859f8694be0794a67d3a461d8d714091.svg)](https://gemnasium.com/github.com/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate)
 
-My first full-stack boilerplate!
-
 ## Stack
 
+- [x] [django](https://www.djangoproject.com/) as backend
 - [x] [yarn](https://github.com/yarnpkg/yarn) as dependency manager
 - [x] [gulp](https://github.com/gulpjs/gulp) as task runner
-- [x] [webpack2](https://github.com/webpack/webpack) as module bundler
+- [x] [webpack 2](https://github.com/webpack/webpack) as module bundler
+- [x] [webpack-dev-server](https://github.com/webpack/webpack-dev-server) provides fast in-memory access to the webpack assets for live reloading
 - [x] followed [ES6 standard](https://github.com/lukehoban/es6features)
 - [x] [babel](https://babeljs.io/) as ES6 to ES5 compiler
 - [x] [react](https://facebook.github.io/react/) for building user interfaces.
@@ -15,7 +15,7 @@ My first full-stack boilerplate!
 - [x] [react-redux](https://github.com/reactjs/react-redux) the official react bindings for [redux](https://github.com/reactjs/redux) (a predictable state container for js apps)
 - [x] [react-router-redux](https://github.com/reactjs/react-router-redux) to keep react-router and redux in sync 
 - [x] [typescript](https://github.com/Microsoft/TypeScript) let's write future javascript => now!
-- [x] [react-hot-loader 3](https://github.com/gaearon/react-hot-loader) for hot module reload! 
+- [x] [react-hot-loader 3](https://github.com/gaearon/react-hot-loader) for react hot module reload! 
 - [x] [editorconfig](http://editorconfig.org/) to maintain consistent coding styles between different editors and IDEs
 - [x] [eslint](http://eslint.org/) to lint javascript files (.js, .jsx)
 - [x] [tslint](https://palantir.github.io/tslint/) to lint typescript files (.ts, .tsx)
@@ -52,32 +52,32 @@ If you meet permission problem for global install, check [this](https://github.c
 
 If you don't have python 3.6.0 installed, you can choose to use [pyenv](https://github.com/yyuu/pyenv)
 
-~~~bash
+```bash
 brew install pyenv
 pyenv install 3.6.0
 pyenv local 3.6.0
-~~~
+```
 
 After that, create a virtual python environment using python 3.6.0, naming the folder as `pyenv` which has been added to `.gitignore`
 
-~~~bash
+```bash
 pip install virtualenv
 virtualenv -p python3 pyenv
-~~~
+```
 
 Source your virtualenv and install the required package through pip
 
-~~~bash
+```bash
 source pyenv/bin/activate
 pip install -r backend/requirements.txt
-~~~
+```
 
 
 ### Customize your django setting
 
-~~~bash
+```bash
 vim backend/project_name/settings.py
-~~~
+```
 
 You probably want to change:
 
@@ -93,50 +93,50 @@ You probably want to change:
 
 **On development (with react-hot-reload):**
 
-~~~bash
+```bash
 gulp
-~~~
+```
 
 **On production (with uglify-js and other optimazitions):**
 
-~~~bash
+```bash
 gulp --env production
-~~~
+```
 
 
 ### Run django backend server
 
-~~~bash
+```bash
 cd backend
-~~~
+```
 
 **On development:**
 
-~~~bash
+```bash
 python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
-~~~
+```
 
 **On production:**
 
-~~~bash
+```bash
 vim project_name/settings.py
-~~~
+```
 
 Set `DEBUG` to `False`
 
-~~~bash
+```bash
 python manage.py makemigrations
 python manage.py migrate
 python manage.py collectstatic
 # Setup Apache or Nginx to support static files here
 python manage.py runserver
-~~~
+```
 
 ### Boilerplate setup tutorial step by step
 
-I will write a tutorial about how to setup those stuffs together step by step asap :)
+I will write a tutorial about how to setup this stack step by step asap :)
 
 ### If you prefer to use Node.js as backend
 
