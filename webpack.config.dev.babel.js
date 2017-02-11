@@ -8,7 +8,6 @@ import WebpackMd5Hash from 'webpack-md5-hash';
 // eslint-disable-next-line import/no-unresolved
 import * as ReactManifest from './frontend/dist/dll/react_manifest.json';
 
-
 export default {
   // The base directory, an absolute path, for resolving entry points and loaders from configuration
   context: path.resolve(__dirname),

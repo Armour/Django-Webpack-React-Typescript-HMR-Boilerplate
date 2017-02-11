@@ -6,6 +6,7 @@
 - [x] [django](https://www.djangoproject.com/) as backend
 - [x] [yarn](https://github.com/yarnpkg/yarn) as dependency manager
 - [x] [gulp](https://github.com/gulpjs/gulp) as task runner
+- [x] [materialize](http://materializecss.com/) a modern responsive front-end framework based on Material Design
 - [x] [webpack 2](https://github.com/webpack/webpack) as module bundler
 - [x] [webpack-dev-server](https://github.com/webpack/webpack-dev-server) provides fast in-memory access to the webpack assets for live reloading
 - [x] followed [ES6 standard](https://github.com/lukehoban/es6features)
