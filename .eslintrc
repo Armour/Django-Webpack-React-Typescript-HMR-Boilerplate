@@ -11,6 +11,7 @@
   "rules": {
     "indent": ["error", 2], // Enforce 2 spaces
     "max-len": 0, // I don't like max line length :S
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }], // Allow ES6 template literals
     "no-console": 0, // Allow console.log()
     "import/export": 2, // Report any invalid exports
     "import/first": 2, // Ensure all imports appear before other statements
