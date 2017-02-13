@@ -3,5 +3,5 @@ from django.http import HttpResponse
 
 urlpatterns = [
     # API url goes here
-    url(r'', lambda request: HttpResponse('Hello World!'), name='hello_world'),
+    url(r'', lambda request: HttpResponse('Api Goes Here'), name='api'),
 ]

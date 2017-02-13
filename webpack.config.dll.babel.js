@@ -3,7 +3,6 @@ import webpack from 'webpack';
 
 import BundleTracker from 'webpack-bundle-tracker';
 
-
 const reactVendors = [
   'react',
   'react-dom',
