@@ -22,5 +22,5 @@ urlpatterns = [
     url(r'^admin', admin.site.urls),
     url(r'^api', include('app_name.urls')),
     url(r'^.*$', ExtraContextTemplateView.as_view(template_name="index.html",
-                                                  extra_context={'title': 'My Blog'})),
+                                                  extra_context={'title': 'Boilerplate'})),
 ]
