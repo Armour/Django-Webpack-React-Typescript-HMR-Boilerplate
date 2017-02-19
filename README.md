@@ -32,7 +32,7 @@
 * `yarn` (recommended) or `npm`
 * `python 3.6.0` and `virtualenv`
     * Note: you can use `pyenv` to manage your different versions of python
-* `postgresql` (or other database that you want)
+* `postgresql` (or other database if you want)
 
 Install [yarn](https://yarnpkg.com/en/docs/install#linux-tab) follows official documentation.
 
