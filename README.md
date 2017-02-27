@@ -3,36 +3,42 @@
 
 ## Stack
 
-- [x] [django](https://www.djangoproject.com/) as backend
-- [x] [yarn](https://github.com/yarnpkg/yarn) as dependency manager
-- [x] [gulp](https://github.com/gulpjs/gulp) as task runner
-- [x] [materialize](http://materializecss.com/) a modern responsive front-end framework based on Material Design
-- [x] [webpack 2](https://github.com/webpack/webpack) as module bundler
-- [x] [webpack-dev-server](https://github.com/webpack/webpack-dev-server) provides fast in-memory access to the webpack assets for live reloading
+- [x] [django](https://www.djangoproject.com/) - backend
+- [x] [yarn](https://github.com/yarnpkg/yarn) - dependency manager
+- [x] [gulp](https://github.com/gulpjs/gulp) - task runner
+- [x] [materialize](http://materializecss.com/) - a modern responsive front-end framework based on Material Design
+- [x] [sass](https://github.com/sass/sass) - CSS pre-processors
+- [x] [postcss](https://github.com/postcss/postcss) - CSS post-processor
+- [x] [webpack 2](https://github.com/webpack/webpack) - module bundler
+- [x] [webpack-dev-server](https://github.com/webpack/webpack-dev-server) - provides fast in-memory access to the webpack assets for live reloading
 - [x] followed [ES6 standard](https://github.com/lukehoban/es6features)
-- [x] [babel](https://babeljs.io/) as ES6 to ES5 compiler
-- [x] [react](https://facebook.github.io/react/) for building user interfaces.
-- [x] [react-router](https://github.com/ReactTraining/react-router) for routing
-- [x] [react-redux](https://github.com/reactjs/react-redux) the official react bindings for [redux](https://github.com/reactjs/redux) (a predictable state container for js apps)
-- [x] [react-router-redux](https://github.com/reactjs/react-router-redux) to keep react-router and redux in sync
-- [x] [typescript](https://github.com/Microsoft/TypeScript) let's write future javascript => now!
-- [x] [react-hot-loader 3](https://github.com/gaearon/react-hot-loader) for react hot module reload!
-- [x] [editorconfig](http://editorconfig.org/) to maintain consistent coding styles between different editors and IDEs
-- [x] [eslint](http://eslint.org/) to lint javascript files (.js, .jsx)
-- [x] [tslint](https://palantir.github.io/tslint/) to lint typescript files (.ts, .tsx)
-- [x] [stylelint](https://stylelint.io/) to lint style files (.css, .scss)
-- [x] [prismjs](https://github.com/PrismJS/prism) for code syntax highlight
-- [ ] [jest](https://facebook.github.io/jest/) for testing
-- [ ] [istanbul](https://github.com/gotwarlost/istanbul) for test coverage
+- [x] [babel](https://babeljs.io/) - compile ES6 to ES5
+- [x] [react](https://facebook.github.io/react/) - building user interfaces
+- [x] [react-hot-loader 3](https://github.com/gaearon/react-hot-loader) - hot module reload!
+- [x] [react-router](https://github.com/ReactTraining/react-router) - routing
+- [x] [react-redux](https://github.com/reactjs/react-redux) - the official react bindings for [redux](https://github.com/reactjs/redux) (a predictable state container for js apps)
+- [x] [react-router-redux](https://github.com/reactjs/react-router-redux) - keep react-router and redux in sync
+- [x] [typescript](https://github.com/Microsoft/TypeScript) - a typed superset of javascript that scales
+- [x] [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) - high quality TypeScript type definitions
+- [x] [editorconfig](http://editorconfig.org/) - maintain consistent coding styles between different editors and IDEs
+- [x] [eslint](http://eslint.org/) - lint javascript files (.js, .jsx)
+- [x] [tslint](https://palantir.github.io/tslint/) - lint typescript files (.ts, .tsx)
+- [x] [stylelint](https://stylelint.io/) - lint style files (.css, .scss)
+- [x] [postgresql](https://www.postgresql.org/) - advanced open source database
+- [x] [prismjs](https://github.com/PrismJS/prism) - code syntax highlight
+- [ ] [jest](https://facebook.github.io/jest/) - testing
+- [ ] [istanbul](https://github.com/gotwarlost/istanbul) - test coverage
+
 
 ## Install && Run
 
 ### Prerequisite
 
+* `node`
 * `yarn` (recommended) or `npm`
 * `python 3.6.0` and `virtualenv`
-    * Note: you can use `pyenv` to manage your different versions of python
-* `postgresql` (or other database if you want)
+    * Tip: you can use `pyenv` to manage your different versions of python
+* `postgresql` or other database
 
 Install [yarn](https://yarnpkg.com/en/docs/install#linux-tab) follows official documentation.
 
@@ -103,7 +109,7 @@ gulp
 **On production (with uglify-js and other optimazitions):**
 
 ```bash
-gulp --env production
+NODE_ENV=production gulp
 ```
 
 
@@ -147,4 +153,4 @@ Check my [another boilerplate](https://github.com/Armour/Express-Webpack-React-T
 
 ### License
 
-GPL-3.0 License
+MIT License

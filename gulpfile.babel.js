@@ -1,5 +1,4 @@
 import gulp from 'gulp';
-import yargs from 'yargs';
 import del from 'del';
 import runSequence from 'run-sequence';
 import childProcess from 'child_process';
@@ -9,7 +8,7 @@ import stylelint from 'gulp-stylelint';
 
 const exec = childProcess.exec;
 const spawn = childProcess.spawn;
-const isProduction = yargs.argv.env === 'production';
+const isProduction = process.env.NODE_ENV === 'production';
 
 // Run eslint
 gulp.task('eslint', () =>
