@@ -38,7 +38,7 @@
 * `yarn` (recommended) or `npm`
 * `python 3.6.0` and `virtualenv`
     * Tip: you can use `pyenv` to manage your different versions of python
-* `postgresql` or other database
+* `postgresql` or other databases
 
 Install [yarn](https://yarnpkg.com/en/docs/install#linux-tab) follows official documentation.
 
@@ -49,10 +49,10 @@ Install [pyenv](https://github.com/yyuu/pyenv) follows official documentation.
 
 Go to project root directory:
 
-~~~bash
+```bash
 yarn
 yarn global add gulp
-~~~
+```
 
 If you meet permission problem for global install, check [this](https://github.com/yarnpkg/yarn/issues/1060#issuecomment-268160528) out.
 
