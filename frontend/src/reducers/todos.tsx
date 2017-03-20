@@ -1,43 +1,27 @@
+import Immutable from 'immutable';
+
 import { ADD_TODO, TOGGLE_TODO } from 'constants/actionTypes';
-import { IActionsTodo, ITodoModel } from 'types';
+import { IActionsTodo, ITodoModel, ITodoModelList } from 'types';
 
-const defaultTodoModel: ITodoModel = {
-  id: 'default_id',
-  text: 'default_text',
-  completed: false,
-};
+const initialState: ITodoModelList = Immutable.List<ITodoModel>([
+  {
+    id: 'fake_id',
+    text: 'Add your own todo task above, click to mark each todo as completed',
+    completed: false,
+  },
+]);
 
-const todo = (state: ITodoModel = defaultTodoModel, action: IActionsTodo): ITodoModel => {
+const todos = (state = initialState, action: IActionsTodo): ITodoModelList => {
   switch (action.type) {
     case ADD_TODO:
-      return {
+      return state.push({
         id: action.id,
         text: action.text,
-        completed: false,
-      };
-    case TOGGLE_TODO:
-      if (state.id !== action.id) {
-        return state;
-      }
-      return Object.assign({}, state, {
-        completed: !state.completed,
+        completed: action.completed,
       });
-    default:
-      return state;
-  }
-};
-
-const todos = (state: ITodoModel[] = [], action: IActionsTodo): ITodoModel[] => {
-  switch (action.type) {
-    case ADD_TODO:
-      return [
-        ...state,
-        todo(undefined, action),
-      ];
     case TOGGLE_TODO:
-      return state.map(t =>
-        todo(t, action),
-      );
+      const index = state.findIndex(s => s !== undefined && s.id === action.id);
+      return index === -1 ? state : state.update(index, s => ({ ...s, completed: !s.completed }));
     default:
       return state;
   }

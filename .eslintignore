@@ -3,3 +3,5 @@ frontend/dist/
 frontend/materialize/
 backend/static/
 pyenv/
+coverage/
+build/

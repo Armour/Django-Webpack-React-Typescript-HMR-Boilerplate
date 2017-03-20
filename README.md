@@ -1,5 +1,11 @@
 # Django-Webpack-React-Typescript-HMR-Boilerplate
-[![Dependency Status](https://gemnasium.com/badges/859f8694be0794a67d3a461d8d714091.svg)](https://gemnasium.com/github.com/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate)
+
+[![Build Status](https://travis-ci.com/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate.svg?token=xzmwu2pcJ1tBo5AwTZV3&branch=master)](https://travis-ci.com/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate)
+[![Dependency Status](https://david-dm.org/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate/status.svg)](https://david-dm.org/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate)
+[![DevDependency Status](https://david-dm.org/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate/dev-status.svg)](https://david-dm.org/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate?type=dev)
+[![Coverage Status](https://coveralls.io/repos/github/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate/badge.svg?branch=master&t=H7lCqC)](https://coveralls.io/github/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate?branch=master)
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
+
 
 ## Stack
 
@@ -18,7 +24,7 @@
 - [x] [react-router](https://github.com/ReactTraining/react-router) - routing
 - [x] [react-redux](https://github.com/reactjs/react-redux) - the official react bindings for [redux](https://github.com/reactjs/redux) (a predictable state container for js apps)
 - [x] [react-router-redux](https://github.com/reactjs/react-router-redux) - keep react-router and redux in sync
-- [x] [typescript](https://github.com/Microsoft/TypeScript) - a typed superset of javascript that scales
+- [x] [Typescript](https://github.com/Microsoft/TypeScript) - a typed superset of javascript that scales
 - [x] [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) - high quality TypeScript type definitions
 - [x] [editorconfig](http://editorconfig.org/) - maintain consistent coding styles between different editors and IDEs
 - [x] [eslint](http://eslint.org/) - lint javascript files (.js, .jsx)
@@ -26,8 +32,9 @@
 - [x] [stylelint](https://stylelint.io/) - lint style files (.css, .scss)
 - [x] [postgresql](https://www.postgresql.org/) - advanced open source database
 - [x] [prismjs](https://github.com/PrismJS/prism) - code syntax highlight
-- [ ] [jest](https://facebook.github.io/jest/) - testing
-- [ ] [istanbul](https://github.com/gotwarlost/istanbul) - test coverage
+- [x] [jest](https://facebook.github.io/jest/) - painless javascript testing
+- [x] [coveralls](https://coveralls.io/) - test coverage
+- [x] [husky](https://github.com/typicode/husky) - git hooks
 - [x] [travis-ci](https://travis-ci.org/) - continuous integration tool for testing and deployment
 
 
@@ -55,7 +62,7 @@ yarn
 yarn global add gulp
 ```
 
-If you meet permission problem for global install, check [this](https://github.com/yarnpkg/yarn/issues/1060#issuecomment-268160528) out.
+If you meet permission problem when try to install yarn globally, check [this](https://github.com/yarnpkg/yarn/issues/1060#issuecomment-268160528) out.
 
 
 ### Set up python virtual environment
@@ -146,7 +153,7 @@ python manage.py runserver
 
 ### Boilerplate setup tutorial step by step
 
-I will write a tutorial about how to setup this stack step by step asap :)
+I will write a tutorial about how to setup those stuffs together step by step asap :)
 
 ### If you prefer to use Node.js as backend
 

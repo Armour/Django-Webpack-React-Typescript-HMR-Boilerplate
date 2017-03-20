@@ -42,7 +42,16 @@ gulp.task('webpack:clean', () => del(['frontend/dist', 'webpack-stats.*.json']))
 
 // Build dll reference files
 gulp.task('webpack:build-dll', ['webpack:clean'], (callback) => {
-  exec('npm run build-dll', (err, stdout, stderr) => {
+  exec('yarn run build-dll', (err, stdout, stderr) => {
+    console.log(stdout);
+    console.log(stderr);
+    callback(err);
+  });
+});
+
+// Generate webpack asset bundles for production
+gulp.task('webpack:build-prod', (callback) => {
+  exec('yarn run build-prod', (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
     callback(err);
@@ -51,7 +60,7 @@ gulp.task('webpack:build-dll', ['webpack:clean'], (callback) => {
 
 // Generate webpack asset bundles for development
 gulp.task('webpack:build-dev', (callback) => {
-  const buildDev = spawn('npm', ['run', 'build-dev']);
+  const buildDev = spawn('yarn', ['run', 'build-dev']);
   buildDev.stdout.on('data', (data) => {
     console.log(`${data}`);
   });
@@ -66,16 +75,7 @@ gulp.task('webpack:build-dev', (callback) => {
   });
 });
 
-// Generate webpack asset bundles for production
-gulp.task('webpack:build-prod', (callback) => {
-  exec('npm run build-prod', (err, stdout, stderr) => {
-    console.log(stdout);
-    console.log(stderr);
-    callback(err);
-  });
-});
-
-// Generate webpack asset bundles
+// Generate asset bundles
 gulp.task('webpack:build', ['webpack:build-dll'], (callback) => {
   if (isProduction) {
     runSequence('webpack:build-prod', callback);
@@ -88,7 +88,7 @@ gulp.task('webpack:build', ['webpack:build-dll'], (callback) => {
 // 1. eslint
 // 2. tslint
 // 3. stylelint
-// 4. generate webpack asset bundles
+// 4. generate asset bundles
 gulp.task('default', (callback) => {
   runSequence('eslint', 'tslint', 'stylelint', 'webpack:build', callback);
 });

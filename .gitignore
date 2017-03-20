@@ -13,3 +13,6 @@ webpack-stats.*.json
 .DS_Store
 __pycache__
 tags
+build/
+coverage/
+.coveralls.yml

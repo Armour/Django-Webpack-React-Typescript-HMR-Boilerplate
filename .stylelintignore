@@ -4,3 +4,4 @@ frontend/materialize/
 frontend/src/sass/materialize/
 backend/static/
 pyenv/
+coverage/
