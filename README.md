@@ -152,6 +152,19 @@ python manage.py collectstatic
 python manage.py runserver
 ```
 
+
+### Run test
+
+```bash
+yarn test
+```
+
+
+### Code coverage
+```bash
+yarn coveralls
+```
+
 ### Boilerplate setup tutorial step by step
 
 I will write a tutorial about how to setup those stuffs together step by step asap :)
