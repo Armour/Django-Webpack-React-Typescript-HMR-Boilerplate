@@ -6,7 +6,6 @@
 [![Coverage Status](https://coveralls.io/repos/github/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate/badge.svg?branch=master&t=H7lCqC)](https://coveralls.io/github/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate?branch=master)
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 
-
 ## Stack
 
 - [x] [django](https://www.djangoproject.com/) - backend
@@ -36,22 +35,21 @@
 - [x] [coveralls](https://coveralls.io/) - test coverage
 - [x] [husky](https://github.com/typicode/husky) - git hooks
 - [x] [travis-ci](https://travis-ci.org/) - continuous integration tool for testing and deployment
-
+- [ ] [docker](https://github.com/docker/docker) - the open-source application container engine
 
 ## Install && Run
 
 ### Prerequisite
 
-* `node`
-* `yarn` (recommended) or `npm`
-* `python 3.6.0` and `virtualenv`
-    * Tip: you can use `pyenv` to manage your different versions of python
-* `postgresql` or other databases
+- `node`
+- `yarn` (recommended) or `npm`
+- `python 3.6.0` and `virtualenv`
+  - Tip: you can use `pyenv` to manage your different versions of python
+- `postgresql` or other databases
 
 Install [yarn](https://yarnpkg.com/en/docs/install#linux-tab) follows official documentation.
 
 Install [pyenv](https://github.com/yyuu/pyenv) follows official documentation.
-
 
 ### Install project dependencies
 
@@ -64,7 +62,6 @@ bash patch.sh
 ```
 
 If you meet permission problem when try to install yarn globally, check [this](https://github.com/yarnpkg/yarn/issues/1060#issuecomment-268160528) out.
-
 
 ### Set up python virtual environment
 
@@ -90,7 +87,6 @@ source pyenv/bin/activate
 pip install -r backend/requirements.txt
 ```
 
-
 ### Customize your django setting
 
 ```bash
@@ -100,12 +96,11 @@ vim backend/project_name/settings.py
 You probably want to change:
 
 1. Database Config
-2. Timezone
-3. Cache Method
-4. Others
+1. Timezone
+1. Cache Method
+1. Others
 
 (if you are using `postgresql`, then create a user called `django` with `django` database, and the default setting is good to go, otherwise you may need to install database driver for your own database)
-
 
 ### Run gulp with webpack to generate bundle assets
 
@@ -120,7 +115,6 @@ gulp
 ```bash
 NODE_ENV=production gulp
 ```
-
 
 ### Run django backend server
 
@@ -152,15 +146,14 @@ python manage.py collectstatic
 python manage.py runserver
 ```
 
-
 ### Run test
 
 ```bash
 yarn test
 ```
 
-
 ### Code coverage
+
 ```bash
 yarn coveralls
 ```
