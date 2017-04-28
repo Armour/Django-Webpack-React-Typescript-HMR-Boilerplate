@@ -1,7 +1,7 @@
 from django.conf.urls import url
-from django.http import HttpResponse
+
+from . import views
 
 urlpatterns = [
-    # API url goes here
-    url(r'', lambda request: HttpResponse('Api Goes Here'), name='api'),
+    url(r'', views.api_request, name='api_request'),
 ]

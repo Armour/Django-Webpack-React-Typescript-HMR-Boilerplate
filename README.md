@@ -29,6 +29,7 @@
 - [x] [eslint](http://eslint.org/) - lint javascript files (.js, .jsx)
 - [x] [tslint](https://palantir.github.io/tslint/) - lint typescript files (.ts, .tsx)
 - [x] [stylelint](https://stylelint.io/) - lint style files (.css, .scss)
+- [x] [pylint](https://www.pylint.org/) - lint python files (.py)
 - [x] [postgresql](https://www.postgresql.org/) - advanced open source database
 - [x] [prismjs](https://github.com/PrismJS/prism) - code syntax highlight
 - [x] [jest](https://facebook.github.io/jest/) - painless javascript testing

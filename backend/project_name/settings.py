@@ -41,10 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'webpack_loader',
+    # 'corsheaders',
     'app_name.apps.AppNameConfig',
 ]
 
 MIDDLEWARE = [
+    # 'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -124,6 +126,18 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+
+# Config for django-cors-headers plugin
+
+# CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_WHITELIST = (
+#     'http://localhost:3004',
+#     'http://127.0.0.1:3004',
+#     'http://0.0.0.0:3004',
+#     # Your domain name here
+# )
+# CORS_URLS_REGEX = r'^.*$'
 
 
 # Static files (CSS, JavaScript, Images)

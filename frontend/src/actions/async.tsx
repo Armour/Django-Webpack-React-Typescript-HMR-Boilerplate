@@ -3,6 +3,7 @@ import { Dispatch } from 'react-redux';
 import { RECEIVE_ERROR, RECEIVE_RESPONSE, START_REQUEST } from 'constants/actionTypes';
 import { FETCH_API_DOMAIN_NAME, FETCH_API_HTTP_PORT } from 'constants/fetchApi';
 import { IActionReceiveError, IActionReceiveResponse, IActionStartRequest, IAsyncApiCallState } from 'types';
+import { getCookie } from 'utils';
 
 export const startRequest = (url: string): IActionStartRequest => {
   return {
@@ -33,11 +34,13 @@ const fetchApiData = (url: string) => {
   return async (dispatch: Dispatch<IAsyncApiCallState>) => {
     dispatch(startRequest(url));
     try {
+      alert(getCookie('csrftoken'));
       const req = new Request(`http://${FETCH_API_DOMAIN_NAME}:${FETCH_API_HTTP_PORT}/${url}`, {
         method: 'POST',
-        headers: new Headers({
-          'Content-Type': 'application/json',
-        }),
+        headers: {
+          // POST data in django need csrf token
+          'X-CSRFToken': getCookie('csrftoken'),
+        },
       });
       const res: Response = await fetch(req);
       if (res.ok) {

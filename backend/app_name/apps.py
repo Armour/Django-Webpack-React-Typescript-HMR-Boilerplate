@@ -4,4 +4,7 @@ from django.apps import AppConfig
 
 
 class AppNameConfig(AppConfig):
+    """
+    App name config
+    """
     name = 'app_name'
