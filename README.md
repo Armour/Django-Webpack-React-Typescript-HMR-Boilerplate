@@ -5,7 +5,7 @@
 [![DevDependency Status](https://david-dm.org/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate/dev-status.svg)](https://david-dm.org/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate?type=dev)
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 
-### Unfortunately, this project is DEPRECATED
+### This project is DEPRECATED
 
 Please checkout [this one](https://github.com/Armour/express-webpack-react-redux-typescript-boilerplate) with Node.js support! :)
 
