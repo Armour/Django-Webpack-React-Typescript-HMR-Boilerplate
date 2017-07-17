@@ -3,8 +3,11 @@
 [![Build Status](https://travis-ci.com/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate.svg?token=xzmwu2pcJ1tBo5AwTZV3&branch=master)](https://travis-ci.com/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate)
 [![Dependency Status](https://david-dm.org/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate/status.svg)](https://david-dm.org/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate)
 [![DevDependency Status](https://david-dm.org/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate/dev-status.svg)](https://david-dm.org/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate?type=dev)
-[![Coverage Status](https://coveralls.io/repos/github/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate/badge.svg?branch=master&t=H7lCqC)](https://coveralls.io/github/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate?branch=master)
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
+
+### Unfortunately, this project is DEPRECATED
+
+Please checkout [this one](https://github.com/Armour/express-webpack-react-redux-typescript-boilerplate) with Node.js support! :)
 
 ## Stack
 
@@ -158,14 +161,6 @@ yarn test
 ```bash
 yarn coveralls
 ```
-
-### Boilerplate setup tutorial step by step
-
-I will write a tutorial about how to setup those stuffs together step by step asap :)
-
-### If you prefer to use Node.js as backend
-
-Check my [another boilerplate](https://github.com/Armour/Express-Webpack-React-Typescript-HMR-Boilerplate) with Node.js support!
 
 ### License
 
