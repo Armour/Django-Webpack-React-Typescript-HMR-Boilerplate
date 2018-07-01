@@ -1,5 +1,6 @@
 # Django-Webpack-React-Typescript-HMR-Boilerplate
 
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://bitbucket.org/lbesson/ansi-colors)
 [![Build Status](https://travis-ci.com/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate.svg?token=xzmwu2pcJ1tBo5AwTZV3&branch=master)](https://travis-ci.com/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate)
 [![Dependency Status](https://david-dm.org/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate/status.svg)](https://david-dm.org/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate)
 [![DevDependency Status](https://david-dm.org/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate/dev-status.svg)](https://david-dm.org/Armour/Django-Webpack-React-Typescript-HMR-Boilerplate?type=dev)
